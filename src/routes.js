@@ -18,7 +18,10 @@ import gameMiddleware from './app/middlewares/gamePoints';
 
 const routes = new Router();
 const upload = multer(multerConfig);
-
+''
+routes.get('/get', (req,res) => {
+  return res.json({message: "hello f*ck*ng world"})
+});
 routes.post('/users', UserController.store);
 routes.post('/session', SessionController.store);
 
